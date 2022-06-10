@@ -22,4 +22,9 @@ public class Book {
         this.publishingYear = publishingYear;
     }
 
+    // Добавила геттер для автора:
+    public Author getAuthor() {
+        return author;
+    }
+
 }
