@@ -1,5 +1,7 @@
 package hw9;
 
+import java.util.Objects;
+
 public class Book {
     private final String nameOfTheBook;
     private int publishingYear;
@@ -27,4 +29,21 @@ public class Book {
         return author;
     }
 
+    @Override
+    public String toString() {
+        return "Автор книги: " + author + ", Название книги: " + nameOfTheBook + ", год издания: " + publishingYear;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return publishingYear == book.publishingYear && Objects.equals(nameOfTheBook, book.nameOfTheBook) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameOfTheBook, publishingYear, author);
+    }
 }

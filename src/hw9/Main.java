@@ -26,5 +26,19 @@ public class Main {
         System.out.println("book1's author's name - " + book1.getAuthor().getFirstName()  + " " + book1.getAuthor().getLastName());
         System.out.println("book2's author's name - " + book2.getAuthor().getFirstName()  + " " + book2.getAuthor().getLastName());
 
+        // Проверка метода equals для класса Author:
+        System.out.println();
+        System.out.println("Проверка метода equals и toString для класса Author:");
+        System.out.println(author1.equals(author2));
+        System.out.println(author1.toString());
+        System.out.println(author2.toString());
+
+        // Проверка метода equals для класса Book:
+        System.out.println();
+        System.out.println("Проверка метода equals и toString для класса Book:");
+        System.out.println(book1.equals(book2));
+        System.out.println(book1.toString());
+        System.out.println(book2.toString());
+
     }
 }
